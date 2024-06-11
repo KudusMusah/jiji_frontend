@@ -116,7 +116,7 @@ function updateCartHome(data){
     //   alert('JSONed')
     //    console.log(data)
         
-       window.location.href="/cart.html"
+       window.location.href=window.location.url
         
       
         
