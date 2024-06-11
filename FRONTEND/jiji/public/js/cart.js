@@ -117,9 +117,6 @@ function updateCartHome(data){
     //    console.log(data)   
     })
     .catch(error => {
-        // alert("alerted")
-        // console.error('An error occured:', error);
-        window.location.href="/FRONTEND/jiji/src/cart.html"
 
     });
 
