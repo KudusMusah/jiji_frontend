@@ -116,7 +116,7 @@ function updateCartHome(data){
     //   alert('JSONed')
     //    console.log(data)
         
-       window.location.href="https://jiji-frontend.onrender.com/cart.html"
+       window.location.href="/cart.html"
         
       
         
