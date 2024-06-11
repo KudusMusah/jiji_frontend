@@ -129,11 +129,11 @@ function updateHome(data){
            <div onClick="addToCart(${product.id})" class="relative w-[11rem] rounded-md bg-white ">
            <a href="#">
                <div>
-                   <img src="../public/img/fruit.jpg" class="h-[8rem] w-[11rem] object-cover rounded-t-md">
+                   <img src="./FRONTEND/jiji/public/img/fruit.jpg" class="h-[8rem] w-[11rem] object-cover rounded-t-md">
                </div>
                <div class=" py-4 px-2">
                    <h1>${product.name}</h1>
-                   <h2 class="text-green-600">GHC ${product.price}</h2>
+                   <h2 class="text-green-600">GHC ${product.price} </h2>
                </div>
                <div class="absolute right-3 bg-white p-2 top-[52%] shadow-md rounded-[50%]">
                    <i class='bx bx-bookmark hover:shadow-lg cursor-pointer text-xl text-green-600'></i>
@@ -186,7 +186,7 @@ function updateHome(data){
           let row2=
           ` <li onClick="categoryStore(${category.id})" class="flex justify-between group items-center hover:bg-[#cadbec93] p-2 cursor-pointer">
           <div class="flex">
-              <img src="../public/img/vehicles.png" class="h-8 w-8 mt-2">
+              <img src="./FRONTEND/jiji/public/img/vehicles.png" class="h-8 w-8 mt-2">
               <div class="px-2">
                   <h2 class="text-gray-500 text-sm font-medium">${category.name}</h2>
               </div>   
@@ -200,7 +200,7 @@ function updateHome(data){
           `
           <div onClick="categoryStore(${category.id})" class="bg-[#fff] py-2 px-2 lg:px-8 text-white">
                         <div class="flex justify-center my-3">
-                            <img src="../public/img/vehicles.png">
+                            <img src="./FRONTEND/jiji/public/img/vehicles.png">
                         </div>
                         <h1 class="text-center text-gray-900 text-sm">${category.name}</h1>
                     </div>
@@ -224,7 +224,7 @@ function updateHome(data){
         let row5=
         ` <li onClick="regionStore(${region.id})" class="flex justify-between group items-center hover:bg-[#cadbec93] p-2 cursor-pointer">
         <div class="flex">
-            <img src="../public/img/vehicles.png" class="h-8 w-8 mt-2">
+            <img src="./FRONTEND/jiji/public/img/vehicles.png" class="h-8 w-8 mt-2">
             <div class="px-2">
                 <h2 class="text-gray-500 text-sm font-medium">${region.name}</h2>
             </div>   

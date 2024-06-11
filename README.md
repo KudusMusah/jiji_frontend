@@ -1,1 +1,2 @@
-# jiji_frontend
+# frontend
+Jiji frontend 

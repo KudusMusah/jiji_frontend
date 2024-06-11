@@ -2,10 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../public/img/jiji_logo.png">
-    <link rel="stylesheet" href="../public/output.css">
-    <link rel="stylesheet" href="../public/css/styles.css">
-    <link rel="stylesheet" href="../public/css/carousel-style.css">
+    <link rel="icon" type="image/x-icon" href="./FRONTEND/jiji/public/img/jiji_logo.png">
+    <link rel="stylesheet" href="./FRONTEND/jiji/public/output.css">
+    <link rel="stylesheet" href="./FRONTEND/jiji/public/css/styles.css">
+    <link rel="stylesheet" href="./FRONTEND/jiji/public/css/carousel-style.css">
+    <script src="./FRONTEND/jiji/public/js/cart.js"></script>
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -27,8 +28,8 @@
         <header class="fixed w-full z-[100] flex justify-center bg-[#00b53f]" style="box-shadow: 1px 1px 4px #50727da4;">
             <div class="flex items-center justify-between w-[70rem] sm:mx-[2rem] md:mx-[3rem] lg:mx-[5rem] xl:mx-[6rem]">
                 <div class="relative">
-                    <a href="#">
-                        <img class="w-[70px] h-[60px] object-cover" src="../public/img/jiji_logo-removebg-preview.png">
+                    <a href="index.html">
+                        <img class="w-[70px] h-[60px] object-cover" src="./FRONTEND/jiji/public/img/jiji_logo-removebg-preview.png">
                     </a>
                     <div class="absolute hidden sm:block md:hidden left-[10rem] w-[20rem] top-2 text-green-400">  
                         <h1>SELL FASTER,</h1>
@@ -41,7 +42,7 @@
                         <a href="#" class="text-white">Sign in</a>
                         <a class="text-white">|</a>
                         <a href="#" class="text-white">Registration</a>
-                       <a href="cart.html"><button style="cursor: pointer;" class="py-[6px] px-10 text-xm rounded bg-[#FEA03C] hover:bg-[#cf8331] text-white text-xl">Cart</button></a> 
+                    
                     </div>
                 </nav>
             </div>
@@ -58,137 +59,22 @@
         </div>
 
         <section class=" mx-auto 2xl:w-[120rem] px-[3%] sm:px-[5%] md:px-[8%] lg:px-[2%] xl:px-[8%] py-4">
-            <div class="xl:flex">
-                <div class="relative w-[30%] hidden xl:block">
-                    <div class="left-side">
-                        <div  class="card-top" > Filter by Category</div>
-                        <div style="height: 25rem;" class=" overflow-y-scroll bg-white shadow-md">
+            <div style="display:flex; flex-wrap: wrap;" id="cart_container">
 
-                            <div class="">
-                                <ul id="category_container">
-                    
-        
-                                </ul>
-                            </div>
-                            
 
-                        </div>
+              
+          
+          
 
-                        <!-- range -->
-                        <div  class="card-top" > Filter by Range</div>
-                        <div style=" height: fit-content;" class=" overflow-y-hidden bg-white shadow-md">
-
-                            <div class="">
-                            <div class="range">
-                                <input type="number" name="minimum" id="minimum" min="1" placeholder="min">
-                                <span>-</span>
-                                <input type="number" name="maximum" id="maximum" min="2" placeholder="max">
-                            </div>
-
-                            <div onClick="rangeFilter()" style="color: green; font-size: 1.2rem; display: flex; justify-content:flex-end ; margin-right: 0.7rem; cursor: pointer;"><b>Filter</b></div>
-
-                                
-                            </div>
-                            
-
-                        </div>
-
-                        <!-- region -->
-                        <div  class="card-top" > Filter by Region</div>
-                        <div style=" height: 20rem;" class=" overflow-y-scroll bg-white shadow-md">
-                            <div class="">
-                                
-                                <ul id="region_container">
-                    
-        
-                                </ul>
-                            </div>
-                            
-
-                        </div>
-
-                    </div>
-                    
-                </div>
-                
-                <div id="hidden_category" class="grid grid-cols-4 xl:hidden gap-[2px] w-full">
-                    <div class="bg-[#fff] py-2 px-2 lg:px-8 text-white">
-                        <div class="flex justify-center my-3">
-                            <button class="rounded-[50%] h-[65%] bg-red-500 shadow-md"><i class='bx bx-plus text-white text-[3rem] md:text-[4rem] lg:text-[5rem] rounded-lg'></i></button>
-                        </div>
-                        <h1 class="text-sm md:text-base lg:text-lg text-center font-semibold text-red-500">Post add</h1>
-                    </div>
-                    
-                    
-
-                </div>
-                <div class="section1 w-[70%] hidden xl:block">
-                    <div class="flex">
-                        <div class="w-[35rem] h-[13rem] mx-4">
-                            <!-- Slideshow container -->
-                            <div class="slideshow-container">
-
-                                <!-- Full-width images with number and caption text -->
-                                <div class="mySlides fade">
-                                <img src="../public/img/how to buy.jpeg" style="width:100%" class="object-cover h-[13rem]">
-                                </div>
-                            
-                                <div class="mySlides fade">
-                                <img src="../public/img/how to buy.jpeg" style="width:100%" class="object-cover h-[13rem]">
-                                </div>
-                            
-                                <div class="mySlides fade">
-                                <img src="../public/img/online.jpg" style="width:100%" class="object-cover h-[13rem]">
-                                </div>
-                            
-                                <!-- Next and previous buttons -->
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                            </div>
-                            <br>
-                            
-                            <!-- The dots/circles -->
-                            <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                                <span class="dot" onclick="currentSlide(3)"></span>
-                            </div>
-                        </div>
-                        <div class="bg-[#fea03c] h-[13rem] w-[14rem] p-2 text-white">
-                            <h1 class="text-lg font-semibold">Got something to sell?</h1>
-                            <div class="flex justify-center my-3">
-                                <button class="relative h-[6rem] w-[6rem]  rounded-[50%] bg-white shadow-md before:bg-[#fea03c] before:w-[60%] before:h-[6%] before:rounded-[4px] before:absolute before:top-[50%] before:left-[50%] before:translate-x-[-50%] before:translate-y-[-50%] after:bg-[#fea03c] after:w-[6%] after:h-[60%] after:rounded-[4px] after:absolute after:top-[50%] after:left-[50%] after:translate-x-[-50%] after:translate-y-[-50%]"></button>
-                            </div>
-                            <h1 class="text-lg text-center font-semibold">Post an advert for free</h1>
-                        </div>
-                    </div>
-                    <div class="px-4 my-4">
-                        <h1 class="font-bold py-5 text-[#284058f8] text-xl">Trending ads</h1>
-                        <div class="flex flex-wrap gap-2">
-
-                            <!-- Holds the products  -->
-                            <div id="products_container" class="flex flex-wrap gap-2">
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="my-4 block xl:hidden">
-                    <h1 class="font-bold py-5 text-[#284058f8] text-xl">Trending ads</h1>
-                    <div class="flex justify-center w-full">
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 w-full">
-
-                            <div id="hidden_container" class="grid grid-cols-2 md:grid-cols-4 gap-2 w-full">
-
-                            </div>
-
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
+
+            
+           
+
+            
+
+
+
         </section>
         <!-- Footer-->
         <div class="footer mt-[5%] flex justify-center bg-white md:bg-[#cadbec05] ">
@@ -319,28 +205,28 @@
                         <svg class="absolute top-0 rounded-[100%]" height="28" viewBox="0 0 64 64" width="28" xmlns="http://www.w3.org/2000/svg"><g id="flat"><path d="m3 11h19v42h-19z" fill="#3e8051"/><path d="m22 11h20v42h-20z" fill="#f3f2f0"/><path d="m42 11h19v42h-19z" fill="#3e8051"/></g></svg>
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public/img/kenya.jpg" alt="Kenya" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public/img/kenya.jpg" alt="Kenya" class="icon rounded-[50%] object-cover">
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public/img/uganda.jpg" alt="Ugnada" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public/img/uganda.jpg" alt="Ugnada" class="icon rounded-[50%] object-cover">
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public//img/tanzania.jpg" alt="Tanzania" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public//img/tanzania.jpg" alt="Tanzania" class="icon rounded-[50%] object-cover">
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public//img/ethiopia.jpg" alt="Ethiopia" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public//img/ethiopia.jpg" alt="Ethiopia" class="icon rounded-[50%] object-cover">
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public//img/senegal.jpg" alt="senegal" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public//img/senegal.jpg" alt="senegal" class="icon rounded-[50%] object-cover">
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public//img/civ.jpg" alt="Cote D' Ivoire" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public//img/civ.jpg" alt="Cote D' Ivoire" class="icon rounded-[50%] object-cover">
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public//img/bangladesh.jpg" alt="Bangladesh" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public//img/bangladesh.jpg" alt="Bangladesh" class="icon rounded-[50%] object-cover">
                     </div>
                     <div class="w-[2rem] h-[2rem] mx-5 border-2 border-white rounded-[50%]">
-                        <img src="../public//img/srilanka.jpg" alt="Srilanka" class="icon rounded-[50%] object-cover">
+                        <img src="./FRONTEND/jiji/public//img/srilanka.jpg" alt="Srilanka" class="icon rounded-[50%] object-cover">
                     </div>
                 </div>
                 <div class="py-4 md:py-0 bg-[#00b53f]">
