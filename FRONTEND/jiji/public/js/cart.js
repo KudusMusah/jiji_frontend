@@ -114,12 +114,7 @@ function updateCartHome(data){
     })
     .then(data => {
     //   alert('JSONed')
-    //    console.log(data)
-        
-       window.location.href=window.location.url
-        
-      
-        
+    //    console.log(data)   
     })
     .catch(error => {
         // alert("alerted")
